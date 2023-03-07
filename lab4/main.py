@@ -17,8 +17,6 @@ for n in range(3, 10):
 
         for i, (train_index, test_index) in enumerate(kF.split(data)):
             accuracies.append(rand_score(neighbours.predict([data[test_index]][0]), lastColumn[test_index]))
-            # if n == 3 and p == 2:
-            #     break
 
         print(f'metric={metric}, average accuracy with {n} neighbours:{mean(accuracies)}')
     print('-----------------------------------------------------')
