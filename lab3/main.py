@@ -53,6 +53,3 @@ pca = PCA(n_components=2)
 reduced_data = pca.fit_transform(data)
 kmeans = KMeans(n_clusters=3, random_state=0, n_init="auto").fit(reduced_data)
 print('Rand score for data with 2 dimensions:' , rand_score(kmeans.labels_, toCompare))
-
-# kmeans = KMeans(n_clusters=3, random_state=0, n_init="auto")
-#
